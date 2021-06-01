@@ -3,21 +3,18 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          My website is running on React and it took me 4 hours to setup
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Info/>
+    <Info/>
+    </div>
+  );
+}
+
+function Info(){
+  return (
+    <div>
+      <h1> Inventory manamgement</h1>
+      <p>This is my new project</p>
     </div>
   );
 }

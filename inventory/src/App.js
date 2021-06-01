@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import Info from "./info.js"
 
 function App() {
   return (
@@ -10,14 +11,7 @@ function App() {
   );
 }
 
-function Info(){
-  return (
-    <div>
-      <h1> Inventory manamgement</h1>
-      <p>This is my new project</p>
-    </div>
-  );
-}
+
 
 function AddItem(){
   return(

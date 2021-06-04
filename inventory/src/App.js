@@ -6,19 +6,21 @@ function App() {
   return (
     <div>
     <Info/>
-    <AddItem/>
+    <AddItem text = "Tanishka" number ={2}/>
+    <AddItem text = "Tan"/>
     </div>
   );
 }
 
 
 
-function AddItem(){
+function AddItem(props){
+  const value = props.text;
   return(
       <div>
         <form>
           <label for id = 'text-id'>Type Something: </label>
-          <input type = 'text' id = 'text-id'></input>
+          <input type = 'text' id = 'text-id' value={value}></input>
         </form>
       </div>
 

@@ -7,7 +7,6 @@ function App() {
     <div>
     <Info/>
     <AddItem text = "Tanishka" number ={2}/>
-    <AddItem text = "Tan"/>
     </div>
   );
 }

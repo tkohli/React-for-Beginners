@@ -3,21 +3,20 @@ import { useState } from 'react';
 import './App.css';
 // import { userState } from 'react';
 import SearchBar from "./SearchBar"
+import AddItem from "./Additem"
 
 function App() {
-   const [data,setData] = useState({});
+   const [filters,setFilters] = useState({});
+   const[data, setData] = useState({intems:[]})
 
-   const updateData = (seachParams) => {
-      setData(seachParams);
+   const updateFilters = (seachParams) => {
+      setFilters(seachParams);
    };
 
   return (
     <div>
-      <SearchBar callback = {updateData }></SearchBar>
-      <p>Name: {"name" in data ? data['name']: "No data to display"}</p>
-      <p>Price: {"price" in data ? data['price']: "No data to display"}</p>
-      <p>Type: {"type" in data ? data['type']: "No data to display"}</p>
-      <p>Brand: {"brand" in data ? data['brand']: "No data to display"}</p>
+      <SearchBar updateSearchParams = { updateFilters }></SearchBar>
+      <AddItem/>
     </div>
   );
 }

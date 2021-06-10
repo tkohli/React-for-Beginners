@@ -12,7 +12,7 @@ function SearchBar(props){
                         type:type,
                         brand:brand});
 
-    }
+    };
 
     return (
         <div>
@@ -22,7 +22,7 @@ function SearchBar(props){
                 <input 
                 id = 'name-field' 
                 type = 'text' 
-                value = {name} 
+                value = {name}
                 onChange = {(e) => setName(e.target.value)}
                 ></input>
                 <label htmlFor = 'price-field'>Max Price:</label>

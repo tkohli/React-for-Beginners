@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
 import { useState } from 'react';
-import './App.css';
 // import { userState } from 'react';
 import SearchBar from "./SearchBar";
 import AddItem from "./Additem";
@@ -23,10 +22,17 @@ function App() {
    };
 
   return (
-    <div>
-      <SearchBar updateSearchParams = { updateFilters }></SearchBar>
-      <ItemsDisplay items={data["items"]}/>
+    <div className='container'>
+    <div class='row mt-3'>
+        <ItemsDisplay items={data["items"]}/>
+        </div>
+      <div class='row mt-3'>
+        <SearchBar updateSearchParams = { updateFilters }></SearchBar>
+      </div>
+      
+      <div class='row mt-3'>
       <AddItem addItem = {addItemToData}/>
+      </div>
     </div>
   );
 }

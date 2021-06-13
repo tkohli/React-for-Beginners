@@ -15,24 +15,35 @@ function SearchBar(props){
     };
 
     return (
-        <div>
+        <div className = 'container'>
+        < div className='row'>
         <h2>Search for an Item</h2>
-            <form>
-                <label htmlFor = 'name-field'>Name:</label>
+        </div>
+        < div className='row'>
+                <div className='col'>
+                    <label htmlFor = 'name-field'>Name:</label>
                 <input 
+                className='form-control'
                 id = 'name-field' 
                 type = 'text' 
                 value = {name}
                 onChange = {(e) => setName(e.target.value)}
                 ></input>
-                <label htmlFor = 'price-field'>Max Price:</label>
-                <input id = 'price-field' type = 'number' value = {price} onChange = {(e) => setPrice(e.target.value)}></input>
-                <label htmlFor = 'type-field'>Type:</label>
-                <input id = 'type-field' type = 'text' value = {type} onChange = {(e) => setType(e.target.value)}></input>
-                <label htmlFor = 'brand-field'>Brand:</label>
-                <input id = 'brand-field' type = 'text' value = {brand} onChange = {(e) => setBrand(e.target.value)}></input>
-                <button type = 'button' onClick = { seachButtonPressed }>Search</button>
-            </form>
+                </div>
+                <div className='col'><label htmlFor = 'price-field'>Max Price:</label>
+                <input className='form-control' id = 'price-field' type = 'number' value = {price} onChange = {(e) => setPrice(e.target.value)}></input>
+                </div>
+                <div className='col'><label htmlFor = 'type-field'>Type:</label>
+                <input className='form-control' id = 'type-field' type = 'text' value = {type} onChange = {(e) => setType(e.target.value)}></input>
+               </div>
+                 <div className='col'><label htmlFor = 'brand-field'>Brand:</label>
+                <input className='form-control' id = 'brand-field' type = 'text' value = {brand} onChange = {(e) => setBrand(e.target.value)}></input>
+                </div>
+                </div>
+                <div className='row mt-3'>
+                <div className='col-4'/>
+                <button className = "col-4 btn btn-primary"type = 'button' onClick = { seachButtonPressed }>Search</button>
+                </div>
         
         </div>
     )
